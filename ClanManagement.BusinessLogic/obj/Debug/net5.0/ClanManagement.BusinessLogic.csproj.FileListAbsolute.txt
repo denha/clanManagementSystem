@@ -1,0 +1,15 @@
+C:\Users\Denis\source\repos\ClanManagement.BusinessLogic\bin\Debug\net5.0\ClanManagement.BusinessLogic.deps.json
+C:\Users\Denis\source\repos\ClanManagement.BusinessLogic\bin\Debug\net5.0\ClanManagement.BusinessLogic.dll
+C:\Users\Denis\source\repos\ClanManagement.BusinessLogic\bin\Debug\net5.0\ref\ClanManagement.BusinessLogic.dll
+C:\Users\Denis\source\repos\ClanManagement.BusinessLogic\bin\Debug\net5.0\ClanManagement.BusinessLogic.pdb
+C:\Users\Denis\source\repos\ClanManagement.BusinessLogic\obj\Debug\net5.0\ClanManagement.BusinessLogic.csproj.AssemblyReference.cache
+C:\Users\Denis\source\repos\ClanManagement.BusinessLogic\obj\Debug\net5.0\ClanManagement.BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Denis\source\repos\ClanManagement.BusinessLogic\obj\Debug\net5.0\ClanManagement.BusinessLogic.AssemblyInfoInputs.cache
+C:\Users\Denis\source\repos\ClanManagement.BusinessLogic\obj\Debug\net5.0\ClanManagement.BusinessLogic.AssemblyInfo.cs
+C:\Users\Denis\source\repos\ClanManagement.BusinessLogic\obj\Debug\net5.0\ClanManagement.BusinessLogic.csproj.CoreCompileInputs.cache
+C:\Users\Denis\source\repos\ClanManagement.BusinessLogic\obj\Debug\net5.0\ClanManagement.BusinessLogic.dll
+C:\Users\Denis\source\repos\ClanManagement.BusinessLogic\obj\Debug\net5.0\ref\ClanManagement.BusinessLogic.dll
+C:\Users\Denis\source\repos\ClanManagement.BusinessLogic\obj\Debug\net5.0\ClanManagement.BusinessLogic.pdb
+C:\Users\Denis\source\repos\ClanManagement.BusinessLogic\bin\Debug\net5.0\ClanManagement.BusinessLogic.runtimeconfig.json
+C:\Users\Denis\source\repos\ClanManagement.BusinessLogic\bin\Debug\net5.0\ClanManagement.BusinessLogic.runtimeconfig.dev.json
+C:\Users\Denis\source\repos\ClanManagement.BusinessLogic\obj\Debug\net5.0\ClanManagement.BusinessLogic.genruntimeconfig.cache

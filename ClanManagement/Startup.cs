@@ -1,17 +1,12 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using ClanManagement.BusinessLogic.Data;
+using Microsoft.EntityFrameworkCore;
 
-namespace ClanManagement
+namespace ClanApp
 {
     public class Startup
     {
@@ -26,6 +21,7 @@ namespace ClanManagement
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddDbContext<ClanMgtSysDbContext>(o=>o.UseSqlServer(Configuration.GetConnectionString("SqlServer")));
             services.AddSwaggerGen(c =>
             {
 

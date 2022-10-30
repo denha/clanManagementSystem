@@ -1,7 +1,6 @@
 C:\Users\Denis\source\repos\ClanManagement.BusinessLogic\bin\Debug\netcoreapp3.1\ClanManagement.BusinessLogic.deps.json
 C:\Users\Denis\source\repos\ClanManagement.BusinessLogic\bin\Debug\netcoreapp3.1\ClanManagement.BusinessLogic.dll
 C:\Users\Denis\source\repos\ClanManagement.BusinessLogic\bin\Debug\netcoreapp3.1\ClanManagement.BusinessLogic.pdb
-C:\Users\Denis\source\repos\ClanManagement.BusinessLogic\obj\Debug\netcoreapp3.1\ClanManagement.BusinessLogic.csproj.AssemblyReference.cache
 C:\Users\Denis\source\repos\ClanManagement.BusinessLogic\obj\Debug\netcoreapp3.1\ClanManagement.BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Denis\source\repos\ClanManagement.BusinessLogic\obj\Debug\netcoreapp3.1\ClanManagement.BusinessLogic.AssemblyInfoInputs.cache
 C:\Users\Denis\source\repos\ClanManagement.BusinessLogic\obj\Debug\netcoreapp3.1\ClanManagement.BusinessLogic.AssemblyInfo.cs

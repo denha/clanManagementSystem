@@ -25,3 +25,16 @@ C:\Users\Denis\source\repos\ClanManagement\bin\Debug\netcoreapp3.1\Swashbuckle.A
 C:\Users\Denis\source\repos\ClanManagement\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\Denis\source\repos\ClanManagement\obj\Debug\netcoreapp3.1\ClanManagement.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Denis\source\repos\ClanManagement\obj\Debug\netcoreapp3.1\ClanManagement.csproj.CopyComplete
+C:\Users\Denis\source\repos\ClanManagement\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+C:\Users\Denis\source\repos\ClanManagement\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Denis\source\repos\ClanManagement\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Denis\source\repos\ClanManagement\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Denis\source\repos\ClanManagement\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Denis\source\repos\ClanManagement\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Denis\source\repos\ClanManagement\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+C:\Users\Denis\source\repos\ClanManagement\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Denis\source\repos\ClanManagement\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+C:\Users\Denis\source\repos\ClanManagement\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Users\Denis\source\repos\ClanManagement\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+C:\Users\Denis\source\repos\ClanManagement\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
+C:\Users\Denis\source\repos\ClanManagement\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
