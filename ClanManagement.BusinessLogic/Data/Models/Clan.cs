@@ -23,10 +23,18 @@ namespace ClanManagement.BusinessLogic.Data.Models
         [Column("minor_totem")]
         public string MinorTotem { get; set; }
 
-        [Column("motto_id")]
         public string MottoId { get; set; }
 
         [Column("clan_seat")]
         public string ClanSeat { get; set; }
+
+        [Column("lang_id")]
+        public string Lang { get; set; }
+
+        [Column("clan_id")]
+        public List<ClanMotto> ClanMotto { get; set; }
+
+        [Column("clan_id")]
+        public List <Name> PersonalName { get; set; }
     }
 }

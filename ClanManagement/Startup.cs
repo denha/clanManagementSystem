@@ -5,6 +5,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ClanManagement.BusinessLogic.Data;
 using Microsoft.EntityFrameworkCore;
+using ClanManagement.BusinessLogic.Data.AutoMapper;
+using ClanManagement.BusinessLogic.Services;
 
 namespace ClanApp
 {
@@ -27,6 +29,8 @@ namespace ClanApp
 
                 c.SwaggerDoc("V1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "Clan Management", Version = "V1" });
             });
+            services.AddAutoMapper(typeof(AutoMapperProfiles));
+            services.AddScoped<IClanMottoService, ClanMottoService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,7 +52,7 @@ namespace ClanApp
                 c.RoutePrefix = string.Empty;
             });
             app.UseRouting();
-
+            
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

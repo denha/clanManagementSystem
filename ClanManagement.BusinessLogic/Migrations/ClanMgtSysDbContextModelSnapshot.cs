@@ -4,16 +4,14 @@ using ClanManagement.BusinessLogic.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace ClanManagement.BusinessLogic.Data.Migrations
+namespace ClanManagement.BusinessLogic.Migrations
 {
     [DbContext(typeof(ClanMgtSysDbContext))]
-    [Migration("20221030113821_clanMotto-Name")]
-    partial class clanMottoName
+    partial class ClanMgtSysDbContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -37,13 +35,16 @@ namespace ClanManagement.BusinessLogic.Data.Migrations
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("clan_seat");
 
+                    b.Property<string>("Lang")
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("lang_id");
+
                     b.Property<string>("MinorTotem")
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("minor_totem");
 
                     b.Property<string>("MottoId")
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("motto_id");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -62,7 +63,7 @@ namespace ClanManagement.BusinessLogic.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("clan");
+                    b.ToTable("Clan");
                 });
 
             modelBuilder.Entity("ClanManagement.BusinessLogic.Data.Models.ClanMotto", b =>
@@ -73,9 +74,8 @@ namespace ClanManagement.BusinessLogic.Data.Migrations
                         .HasColumnName("id")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("ClanId")
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("clan_id");
+                    b.Property<int?>("ClanId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Motto")
                         .HasColumnType("nvarchar(max)")
@@ -89,6 +89,8 @@ namespace ClanManagement.BusinessLogic.Data.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("ClanId");
+
                     b.ToTable("ClanMotto");
                 });
 
@@ -100,9 +102,8 @@ namespace ClanManagement.BusinessLogic.Data.Migrations
                         .HasColumnName("id")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("ClanId")
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("clan_id");
+                    b.Property<int?>("ClanId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Names")
                         .HasColumnType("nvarchar(max)")
@@ -116,7 +117,30 @@ namespace ClanManagement.BusinessLogic.Data.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("ClanId");
+
                     b.ToTable("Name");
+                });
+
+            modelBuilder.Entity("ClanManagement.BusinessLogic.Data.Models.ClanMotto", b =>
+                {
+                    b.HasOne("ClanManagement.BusinessLogic.Data.Models.Clan", null)
+                        .WithMany("ClanMotto")
+                        .HasForeignKey("ClanId");
+                });
+
+            modelBuilder.Entity("ClanManagement.BusinessLogic.Data.Models.Name", b =>
+                {
+                    b.HasOne("ClanManagement.BusinessLogic.Data.Models.Clan", null)
+                        .WithMany("PersonalName")
+                        .HasForeignKey("ClanId");
+                });
+
+            modelBuilder.Entity("ClanManagement.BusinessLogic.Data.Models.Clan", b =>
+                {
+                    b.Navigation("ClanMotto");
+
+                    b.Navigation("PersonalName");
                 });
 #pragma warning restore 612, 618
         }

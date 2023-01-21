@@ -61,3 +61,9 @@ C:\Users\Denis\source\repos\ClanManagement\obj\Debug\net5.0\ClanManagement.dll
 C:\Users\Denis\source\repos\ClanManagement\obj\Debug\net5.0\ref\ClanManagement.dll
 C:\Users\Denis\source\repos\ClanManagement\obj\Debug\net5.0\ClanManagement.pdb
 C:\Users\Denis\source\repos\ClanManagement\obj\Debug\net5.0\ClanManagement.genruntimeconfig.cache
+C:\Users\Denis\source\repos\ClanManagement\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\Denis\source\repos\ClanManagement\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Denis\source\repos\ClanManagement\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Denis\source\repos\ClanManagement\bin\Debug\net5.0\Microsoft.Extensions.Options.dll
+C:\Users\Denis\source\repos\ClanManagement\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Denis\source\repos\ClanManagement\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
