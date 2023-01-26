@@ -14,6 +14,8 @@ namespace ClanManagement.BusinessLogic.Data.AutoMapper
         public AutoMapperProfiles()
         {
             CreateMap<GetClanMottoDto, ClanMotto>().ReverseMap();
+            CreateMap<GetLanguageDto, Language>().ReverseMap();
+            //CreateMap<UpdateLanguageDto,L>
         }
     }
 }

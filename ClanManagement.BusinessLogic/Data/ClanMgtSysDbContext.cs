@@ -17,5 +17,7 @@ namespace ClanManagement.BusinessLogic.Data
         public DbSet<Clan> Clan { get; set; }
         public DbSet<ClanMotto> ClanMotto { get; set; }
         public DbSet<Name> Name { get; set; }
+
+        public DbSet<Language> Language { get; set; }
     }
 }

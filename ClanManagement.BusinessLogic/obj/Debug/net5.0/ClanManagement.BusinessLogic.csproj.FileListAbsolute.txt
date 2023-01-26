@@ -1,4 +1,6 @@
 C:\Users\Denis\source\repos\ClanManagement.BusinessLogic\bin\Debug\net5.0\ClanManagement.BusinessLogic.deps.json
+C:\Users\Denis\source\repos\ClanManagement.BusinessLogic\bin\Debug\net5.0\ClanManagement.BusinessLogic.runtimeconfig.json
+C:\Users\Denis\source\repos\ClanManagement.BusinessLogic\bin\Debug\net5.0\ClanManagement.BusinessLogic.runtimeconfig.dev.json
 C:\Users\Denis\source\repos\ClanManagement.BusinessLogic\bin\Debug\net5.0\ClanManagement.BusinessLogic.dll
 C:\Users\Denis\source\repos\ClanManagement.BusinessLogic\bin\Debug\net5.0\ref\ClanManagement.BusinessLogic.dll
 C:\Users\Denis\source\repos\ClanManagement.BusinessLogic\bin\Debug\net5.0\ClanManagement.BusinessLogic.pdb
@@ -10,6 +12,4 @@ C:\Users\Denis\source\repos\ClanManagement.BusinessLogic\obj\Debug\net5.0\ClanMa
 C:\Users\Denis\source\repos\ClanManagement.BusinessLogic\obj\Debug\net5.0\ClanManagement.BusinessLogic.dll
 C:\Users\Denis\source\repos\ClanManagement.BusinessLogic\obj\Debug\net5.0\ref\ClanManagement.BusinessLogic.dll
 C:\Users\Denis\source\repos\ClanManagement.BusinessLogic\obj\Debug\net5.0\ClanManagement.BusinessLogic.pdb
-C:\Users\Denis\source\repos\ClanManagement.BusinessLogic\bin\Debug\net5.0\ClanManagement.BusinessLogic.runtimeconfig.json
-C:\Users\Denis\source\repos\ClanManagement.BusinessLogic\bin\Debug\net5.0\ClanManagement.BusinessLogic.runtimeconfig.dev.json
 C:\Users\Denis\source\repos\ClanManagement.BusinessLogic\obj\Debug\net5.0\ClanManagement.BusinessLogic.genruntimeconfig.cache

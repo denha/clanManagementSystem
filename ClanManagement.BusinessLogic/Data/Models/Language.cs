@@ -8,11 +8,13 @@ using System.Threading.Tasks;
 
 namespace ClanManagement.BusinessLogic.Data.Models
 {
-    public class Name:AutoIdBaseEntity
+    public class Language: AutoIdBaseEntity
     {
         [Column("name")]
-        public string Names { get; set; }
-
-        public string ClanId { get; set; }
+        public string Name { get; set; }  
+        
+        [Column("isDefault")]
+        public bool IsDefault { get; set; }
+    
     }
 }

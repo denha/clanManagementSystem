@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ClanManagement.BusinessLogic.Migrations
 {
-    public partial class newDB : Migration
+    public partial class NewDatabase : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -29,13 +29,44 @@ namespace ClanManagement.BusinessLogic.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "ClanMotto",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    motto = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    created_at = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    updated_at = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ClanMotto", x => x.id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Language",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    isDefault = table.Column<bool>(type: "bit", nullable: false),
+                    created_at = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    updated_at = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Language", x => x.id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Name",
                 columns: table => new
                 {
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    clan_id = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ClanId = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     created_at = table.Column<DateTime>(type: "datetime2", nullable: false),
                     updated_at = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
@@ -43,45 +74,21 @@ namespace ClanManagement.BusinessLogic.Migrations
                 {
                     table.PrimaryKey("PK_Name", x => x.id);
                 });
-
-            migrationBuilder.CreateTable(
-                name: "ClanMotto",
-                columns: table => new
-                {
-                    id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    motto = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ClanId = table.Column<int>(type: "int", nullable: true),
-                    created_at = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    updated_at = table.Column<DateTime>(type: "datetime2", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_ClanMotto", x => x.id);
-                    table.ForeignKey(
-                        name: "FK_ClanMotto_Clan_ClanId",
-                        column: x => x.ClanId,
-                        principalTable: "Clan",
-                        principalColumn: "id",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_ClanMotto_ClanId",
-                table: "ClanMotto",
-                column: "ClanId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
+                name: "Clan");
+
+            migrationBuilder.DropTable(
                 name: "ClanMotto");
 
             migrationBuilder.DropTable(
-                name: "Name");
+                name: "Language");
 
             migrationBuilder.DropTable(
-                name: "Clan");
+                name: "Name");
         }
     }
 }

@@ -1,3 +1,10 @@
+C:\Users\Denis\source\repos\ClanManagement\obj\Debug\net5.0\ClanManagement.csproj.AssemblyReference.cache
+C:\Users\Denis\source\repos\ClanManagement\obj\Debug\net5.0\ClanManagement.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Denis\source\repos\ClanManagement\obj\Debug\net5.0\ClanManagement.AssemblyInfoInputs.cache
+C:\Users\Denis\source\repos\ClanManagement\obj\Debug\net5.0\ClanManagement.AssemblyInfo.cs
+C:\Users\Denis\source\repos\ClanManagement\obj\Debug\net5.0\ClanManagement.csproj.CoreCompileInputs.cache
+C:\Users\Denis\source\repos\ClanManagement\obj\Debug\net5.0\ClanManagement.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Denis\source\repos\ClanManagement\obj\Debug\net5.0\ClanManagement.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Denis\source\repos\ClanManagement\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\Denis\source\repos\ClanManagement\bin\Debug\net5.0\appsettings.json
 C:\Users\Denis\source\repos\ClanManagement\bin\Debug\net5.0\ClanManagement.exe
@@ -7,6 +14,8 @@ C:\Users\Denis\source\repos\ClanManagement\bin\Debug\net5.0\ClanManagement.runti
 C:\Users\Denis\source\repos\ClanManagement\bin\Debug\net5.0\ClanManagement.dll
 C:\Users\Denis\source\repos\ClanManagement\bin\Debug\net5.0\ref\ClanManagement.dll
 C:\Users\Denis\source\repos\ClanManagement\bin\Debug\net5.0\ClanManagement.pdb
+C:\Users\Denis\source\repos\ClanManagement\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\Denis\source\repos\ClanManagement\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\Denis\source\repos\ClanManagement\bin\Debug\net5.0\Humanizer.dll
 C:\Users\Denis\source\repos\ClanManagement\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
 C:\Users\Denis\source\repos\ClanManagement\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
@@ -15,6 +24,9 @@ C:\Users\Denis\source\repos\ClanManagement\bin\Debug\net5.0\Microsoft.EntityFram
 C:\Users\Denis\source\repos\ClanManagement\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\Denis\source\repos\ClanManagement\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\Denis\source\repos\ClanManagement\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Denis\source\repos\ClanManagement\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Denis\source\repos\ClanManagement\bin\Debug\net5.0\Microsoft.Extensions.Options.dll
+C:\Users\Denis\source\repos\ClanManagement\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
 C:\Users\Denis\source\repos\ClanManagement\bin\Debug\net5.0\Microsoft.Identity.Client.dll
 C:\Users\Denis\source\repos\ClanManagement\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\Users\Denis\source\repos\ClanManagement\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
@@ -30,6 +42,7 @@ C:\Users\Denis\source\repos\ClanManagement\bin\Debug\net5.0\System.Configuration
 C:\Users\Denis\source\repos\ClanManagement\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
 C:\Users\Denis\source\repos\ClanManagement\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\Denis\source\repos\ClanManagement\bin\Debug\net5.0\System.Runtime.Caching.dll
+C:\Users\Denis\source\repos\ClanManagement\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\Denis\source\repos\ClanManagement\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Denis\source\repos\ClanManagement\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
 C:\Users\Denis\source\repos\ClanManagement\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
@@ -45,13 +58,6 @@ C:\Users\Denis\source\repos\ClanManagement\bin\Debug\net5.0\runtimes\win\lib\net
 C:\Users\Denis\source\repos\ClanManagement\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Denis\source\repos\ClanManagement\bin\Debug\net5.0\ClanManagement.BusinessLogic.dll
 C:\Users\Denis\source\repos\ClanManagement\bin\Debug\net5.0\ClanManagement.BusinessLogic.pdb
-C:\Users\Denis\source\repos\ClanManagement\obj\Debug\net5.0\ClanManagement.csproj.AssemblyReference.cache
-C:\Users\Denis\source\repos\ClanManagement\obj\Debug\net5.0\ClanManagement.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Denis\source\repos\ClanManagement\obj\Debug\net5.0\ClanManagement.AssemblyInfoInputs.cache
-C:\Users\Denis\source\repos\ClanManagement\obj\Debug\net5.0\ClanManagement.AssemblyInfo.cs
-C:\Users\Denis\source\repos\ClanManagement\obj\Debug\net5.0\ClanManagement.csproj.CoreCompileInputs.cache
-C:\Users\Denis\source\repos\ClanManagement\obj\Debug\net5.0\ClanManagement.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Denis\source\repos\ClanManagement\obj\Debug\net5.0\ClanManagement.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Denis\source\repos\ClanManagement\obj\Debug\net5.0\staticwebassets\ClanManagement.StaticWebAssets.Manifest.cache
 C:\Users\Denis\source\repos\ClanManagement\obj\Debug\net5.0\staticwebassets\ClanManagement.StaticWebAssets.xml
 C:\Users\Denis\source\repos\ClanManagement\obj\Debug\net5.0\scopedcss\bundle\ClanManagement.styles.css
@@ -61,9 +67,3 @@ C:\Users\Denis\source\repos\ClanManagement\obj\Debug\net5.0\ClanManagement.dll
 C:\Users\Denis\source\repos\ClanManagement\obj\Debug\net5.0\ref\ClanManagement.dll
 C:\Users\Denis\source\repos\ClanManagement\obj\Debug\net5.0\ClanManagement.pdb
 C:\Users\Denis\source\repos\ClanManagement\obj\Debug\net5.0\ClanManagement.genruntimeconfig.cache
-C:\Users\Denis\source\repos\ClanManagement\bin\Debug\net5.0\AutoMapper.dll
-C:\Users\Denis\source\repos\ClanManagement\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
-C:\Users\Denis\source\repos\ClanManagement\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Users\Denis\source\repos\ClanManagement\bin\Debug\net5.0\Microsoft.Extensions.Options.dll
-C:\Users\Denis\source\repos\ClanManagement\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
-C:\Users\Denis\source\repos\ClanManagement\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll

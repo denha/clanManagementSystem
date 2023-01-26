@@ -31,6 +31,8 @@ namespace ClanApp
             });
             services.AddAutoMapper(typeof(AutoMapperProfiles));
             services.AddScoped<IClanMottoService, ClanMottoService>();
+            services.AddScoped<ILanguageService, LanguageService>();
+            //services.AddScoped<IClanService, ClanService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

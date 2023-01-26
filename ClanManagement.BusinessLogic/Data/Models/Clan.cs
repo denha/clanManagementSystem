@@ -31,10 +31,8 @@ namespace ClanManagement.BusinessLogic.Data.Models
         [Column("lang_id")]
         public string Lang { get; set; }
 
-        [Column("clan_id")]
-        public List<ClanMotto> ClanMotto { get; set; }
 
-        [Column("clan_id")]
-        public List <Name> PersonalName { get; set; }
+
+  
     }
 }
