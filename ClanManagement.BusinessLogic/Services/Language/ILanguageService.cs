@@ -10,9 +10,11 @@ namespace ClanManagement.BusinessLogic.Services
 {
     public interface ILanguageService
     {
-        public Task<ServiceResponse<GetLanguageDto>> CreateLanguage(AddLanguageDto language);
-        public Task<ServiceResponse<List<GetLanguageDto>>> getLanguange();
+         Task<ServiceResponse<GetLanguageDto>> CreateLanguage(AddLanguageDto language);
+         Task<ServiceResponse<List<GetLanguageDto>>> getLanguange();
 
-        public Task<ServiceResponse<GetLanguageDto>> updateLanguage(String Id,UpdateLanguageDto lang);
+         Task<ServiceResponse<GetLanguageDto>> updateLanguage(string Id,UpdateLanguageDto lang);
+
+         Task<ServiceResponse<GetLanguageDto>> deleteLanguage(string languageId);
     }
 }

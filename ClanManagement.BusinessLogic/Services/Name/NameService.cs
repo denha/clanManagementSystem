@@ -5,12 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
 using ClanManagement.BusinessLogic.Data;
-using ClanManagement.BusinessLogic.Data.Dto.Name;
+using ClanManagement.BusinessLogic.Data.Dto;
 using ClanManagement.BusinessLogic.Data.Models;
 
 namespace ClanManagement.BusinessLogic.Services
 {
-    public class NameService
+    public class NameService:INameService
     {
         private readonly IMapper _mapper;
         private readonly ClanMgtSysDbContext _context;
@@ -20,43 +20,34 @@ namespace ClanManagement.BusinessLogic.Services
             _mapper = mapper;
         }
 
-        /*public async Task<ServiceResponse<GetNameDto>> CreateName(AddNameDto name)
+        public async Task<ServiceResponse<GetNameDto>> CreateName(AddNameDto name)
         {
-            ServiceResponse<GetNameDto> result = new ServiceResponse<GetNameDto>();
+            ServiceResponse<GetNameDto> response = new ServiceResponse<GetNameDto>();
             try
             {
-                
-
                 if (string.IsNullOrEmpty(name.ClanId))
                 {
-                    result.Message = "Clan id is missing";
-                    result.Success = false;
-                    return result;
-                }
-                if (string.IsNullOrEmpty(name.Name))
-                {
-                    result.Message = "Name is missing";
-                    result.Success = false;
-                    return result;
+                    response.Success = false;
+                    response.Message = "Clan cannot be empty";
+                    return response;
                 }
 
                 Name nameObj = new Name();
-
                 nameObj.Names = name.Name;
-                nameObj.ClanId = name.ClanId;
+                //nameObj.ClanId = name.ClanId;
 
                 await _context.Name.AddAsync(nameObj);
                 await _context.SaveChangesAsync();
 
-                var DtoResult = _context.
+                response.Data = _mapper.Map<GetNameDto>(nameObj);
+                return response;
 
             }catch(Exception e)
             {
-                result.Message = $"An error has occured {e.Message}";
-                result.Success = false;
-                return result;
+                response.Message = $"An errored has occured {e.Message}";
+                response.Success = false;
+                return response;
             }
-
-        }*/
+        }
     }
 }

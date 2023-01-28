@@ -1,4 +1,4 @@
-﻿using ClanManagement.BusinessLogic.Data.Dto.Name;
+﻿using ClanManagement.BusinessLogic.Data.Dto;
 using ClanManagement.BusinessLogic.Data.Models;
 using System;
 using System.Collections.Generic;
@@ -11,6 +11,6 @@ namespace ClanManagement.BusinessLogic.Services
     public interface INameService
     {
 
-        public Task<ServiceResponse<AddNameDto>> CreateName();
+        Task<ServiceResponse<GetNameDto>> CreateName(AddNameDto name);
     }
 }

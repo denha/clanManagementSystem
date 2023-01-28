@@ -31,7 +31,7 @@ namespace ClanManagement.BusinessLogic.Data.Models
         [Column("lang_id")]
         public string Lang { get; set; }
 
-
+        public ICollection<Name> ClanId { get; set; }
 
   
     }

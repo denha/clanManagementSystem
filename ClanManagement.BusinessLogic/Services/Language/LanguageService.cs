@@ -73,7 +73,7 @@ namespace ClanManagement.BusinessLogic.Services
         }
 
         
-        public async Task<ServiceResponse<GetLanguageDto>> updateLanguage(String Id, UpdateLanguageDto lang)
+        public async Task<ServiceResponse<GetLanguageDto>> updateLanguage(string Id, UpdateLanguageDto lang)
         {
             ServiceResponse<GetLanguageDto> response = new ServiceResponse<GetLanguageDto>();
             try
@@ -85,7 +85,7 @@ namespace ClanManagement.BusinessLogic.Services
                 }
                 else
                 {
-                    var language = await _context.Language.FirstOrDefaultAsync(lng => lng.Id.Equals(2));
+                    var language = await _context.Language.FirstOrDefaultAsync(lng => lng.Id.Equals(Id));
                     if (language != null)
                     {
                         language.Name = lang.Name;
@@ -93,6 +93,10 @@ namespace ClanManagement.BusinessLogic.Services
 
                         await _context.SaveChangesAsync();
                         response.Data = _mapper.Map<GetLanguageDto>(language);
+                    }
+                    else
+                    {
+                        throw new ArgumentNullException();
                     }
 
                 }
@@ -105,9 +109,34 @@ namespace ClanManagement.BusinessLogic.Services
                 return response;
             }
 
-            
 
-            
+        }
+
+        public async Task<ServiceResponse<GetLanguageDto>> deleteLanguage(string languageId)
+        {
+            ServiceResponse<GetLanguageDto> response = new ServiceResponse<GetLanguageDto>();
+            var language = await _context.Language.FirstOrDefaultAsync(lng => lng.Id.Equals(languageId));
+            try
+            {
+                if (language != null)
+                {
+                    _context.Language.Remove(language);
+                    await _context.SaveChangesAsync();
+                    response.Data = _mapper.Map<GetLanguageDto>(language);
+
+                }
+                else
+                {
+                    throw new ArgumentNullException();
+                }
+                return response;
+            }
+            catch (Exception e)
+            {
+                response.Success = false;
+                response.Message = $"An error has occured {e.Message}";
+                return response;
+            }
         }
     }
 }

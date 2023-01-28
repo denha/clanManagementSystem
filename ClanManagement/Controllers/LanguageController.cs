@@ -62,5 +62,17 @@ namespace ClanApp.Controllers
             return Ok(response);
 
         }
+
+        [Route("{id}")]
+        [HttpDelete]
+        public async Task<IActionResult> deleteLanguage(string id)
+        {
+          ServiceResponse<GetLanguageDto> response=  await _language.deleteLanguage(id);
+            if (response.Data==null)
+            {
+                return NotFound(response);
+            }
+            return new NoContentResult();
+        }
     }
 }

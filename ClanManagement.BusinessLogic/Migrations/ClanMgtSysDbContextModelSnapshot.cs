@@ -21,11 +21,10 @@ namespace ClanManagement.BusinessLogic.Migrations
 
             modelBuilder.Entity("ClanManagement.BusinessLogic.Data.Models.Clan", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<string>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("id")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("nvarchar(450)")
+                        .HasColumnName("id");
 
                     b.Property<string>("ClanLeader")
                         .HasColumnType("nvarchar(max)")
@@ -68,11 +67,10 @@ namespace ClanManagement.BusinessLogic.Migrations
 
             modelBuilder.Entity("ClanManagement.BusinessLogic.Data.Models.ClanMotto", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<string>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("id")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("nvarchar(450)")
+                        .HasColumnName("id");
 
                     b.Property<string>("Motto")
                         .HasColumnType("nvarchar(max)")
@@ -91,11 +89,10 @@ namespace ClanManagement.BusinessLogic.Migrations
 
             modelBuilder.Entity("ClanManagement.BusinessLogic.Data.Models.Language", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<string>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("id")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("nvarchar(450)")
+                        .HasColumnName("id");
 
                     b.Property<bool>("IsDefault")
                         .HasColumnType("bit")
@@ -118,14 +115,13 @@ namespace ClanManagement.BusinessLogic.Migrations
 
             modelBuilder.Entity("ClanManagement.BusinessLogic.Data.Models.Name", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<string>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("id")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("nvarchar(450)")
+                        .HasColumnName("id");
 
                     b.Property<string>("ClanId")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Names")
                         .HasColumnType("nvarchar(max)")
@@ -139,7 +135,21 @@ namespace ClanManagement.BusinessLogic.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("ClanId");
+
                     b.ToTable("Name");
+                });
+
+            modelBuilder.Entity("ClanManagement.BusinessLogic.Data.Models.Name", b =>
+                {
+                    b.HasOne("ClanManagement.BusinessLogic.Data.Models.Clan", null)
+                        .WithMany("ClanId")
+                        .HasForeignKey("ClanId");
+                });
+
+            modelBuilder.Entity("ClanManagement.BusinessLogic.Data.Models.Clan", b =>
+                {
+                    b.Navigation("ClanId");
                 });
 #pragma warning restore 612, 618
         }

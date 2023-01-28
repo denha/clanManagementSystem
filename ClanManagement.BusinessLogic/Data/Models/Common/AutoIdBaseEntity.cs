@@ -11,6 +11,6 @@ namespace ClanManagement.BusinessLogic.Data.Models.Common
         [Column("id")]
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        public String Id { get; set; }
     }
 }

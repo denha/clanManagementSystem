@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClanManagement.BusinessLogic.Data.Dto.Name
+namespace ClanManagement.BusinessLogic.Data.Dto
 {
     public class AddNameDto
     {

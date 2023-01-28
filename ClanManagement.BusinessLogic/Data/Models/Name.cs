@@ -14,5 +14,9 @@ namespace ClanManagement.BusinessLogic.Data.Models
         public string Names { get; set; }
 
         public string ClanId { get; set; }
+
+        
+
+        
     }
 }

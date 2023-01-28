@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ClanManagement.BusinessLogic.Migrations
 {
-    public partial class NewDatabase : Migration
+    public partial class ADDCOLUMN2 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -11,8 +11,7 @@ namespace ClanManagement.BusinessLogic.Migrations
                 name: "Clan",
                 columns: table => new
                 {
-                    id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    id = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     clan_leader = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     totem = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -32,8 +31,7 @@ namespace ClanManagement.BusinessLogic.Migrations
                 name: "ClanMotto",
                 columns: table => new
                 {
-                    id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    id = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     motto = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     created_at = table.Column<DateTime>(type: "datetime2", nullable: false),
                     updated_at = table.Column<DateTime>(type: "datetime2", nullable: false)
@@ -47,8 +45,7 @@ namespace ClanManagement.BusinessLogic.Migrations
                 name: "Language",
                 columns: table => new
                 {
-                    id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    id = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     name = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     isDefault = table.Column<bool>(type: "bit", nullable: false),
                     created_at = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -63,24 +60,31 @@ namespace ClanManagement.BusinessLogic.Migrations
                 name: "Name",
                 columns: table => new
                 {
-                    id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    id = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     name = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ClanId = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ClanId = table.Column<string>(type: "nvarchar(450)", nullable: true),
                     created_at = table.Column<DateTime>(type: "datetime2", nullable: false),
                     updated_at = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Name", x => x.id);
+                    table.ForeignKey(
+                        name: "FK_Name_Clan_ClanId",
+                        column: x => x.ClanId,
+                        principalTable: "Clan",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Restrict);
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Name_ClanId",
+                table: "Name",
+                column: "ClanId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
-                name: "Clan");
-
             migrationBuilder.DropTable(
                 name: "ClanMotto");
 
@@ -89,6 +93,9 @@ namespace ClanManagement.BusinessLogic.Migrations
 
             migrationBuilder.DropTable(
                 name: "Name");
+
+            migrationBuilder.DropTable(
+                name: "Clan");
         }
     }
 }
