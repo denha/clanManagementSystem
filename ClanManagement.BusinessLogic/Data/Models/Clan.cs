@@ -33,6 +33,11 @@ namespace ClanManagement.BusinessLogic.Data.Models
 
         public ICollection<Name> ClanId { get; set; }
 
+        [Column("ClanId")]
+        public ICollection<ClanMotto> ClanMotto { get; set; }
+
+        public ICollection<Language> Language { get; set; }
+
   
     }
 }

@@ -6,13 +6,10 @@ using System.Threading.Tasks;
 
 namespace ClanManagement.BusinessLogic.Data.Dto
 {
-    public class AddClanMottoDto
+    public class UpdateClanMottoDto
     {
-
         public string Motto { get; set; }
 
-        public string ClanId { get; set; }
 
-        public string LanguageId { get; set; }
     }
 }

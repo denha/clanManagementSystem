@@ -31,5 +31,53 @@ namespace ClanApp.Controllers
             }
             return Ok(response);
         }
+
+        [HttpGet]
+        public async Task<IActionResult> GetClanMotto()
+        {
+            ServiceResponse<List<GetClanMottoDto>> response = await _clanMotto.GetClanMotto();
+
+            if (!response.Success)
+            {
+                return BadRequest(response);
+            }
+            return Ok(response);
+        }
+
+        [Route("ClanId/{id}")]
+        [HttpGet]
+        public async Task<IActionResult> GetClanMottoByClanId(string id)
+        {
+          ServiceResponse<List<GetClanMottoDto>> result =   await _clanMotto.GetClanMottoByClanId(id);
+            if (!result.Success)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
+        }
+
+        [Route("ClanId/{id}/{langId}")]
+        [HttpPut]
+        public async Task<IActionResult> UpdateClanMotto(UpdateClanMottoDto clan, string id,string langId)
+        {
+          ServiceResponse<GetClanMottoDto> results =  await  _clanMotto.UpdateClanMotto(id, clan, langId);
+            if (!results.Success)
+            {
+                return BadRequest(results);
+            }
+            return Ok(results);
+        }
+
+        [Route("{id}")]
+        [HttpDelete]
+        public async Task<IActionResult> DeleteClanMotto(string id)
+        {
+            ServiceResponse<GetClanMottoDto> results = await _clanMotto.DeleteClanMotto(id);
+            if (!results.Success)
+            {
+                return BadRequest(results);
+            }
+            return new NoContentResult();
+        }
     }
 }

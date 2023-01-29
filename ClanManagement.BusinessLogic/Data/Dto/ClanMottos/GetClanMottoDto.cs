@@ -7,9 +7,11 @@ using System.Threading.Tasks;
 namespace ClanManagement.BusinessLogic.Data.Dto
 {
     public class GetClanMottoDto
-    {
+    {   public string Id { get; set; }
         public string Motto { get; set; }
 
-       // public string ClanId { get; set; }
+        public string ClanId { get; set; }
+
+     
     }
 }

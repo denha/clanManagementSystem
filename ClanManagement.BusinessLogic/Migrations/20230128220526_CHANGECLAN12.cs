@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ClanManagement.BusinessLogic.Migrations
 {
-    public partial class ADDCOLUMN2 : Migration
+    public partial class CHANGECLAN12 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -33,12 +33,20 @@ namespace ClanManagement.BusinessLogic.Migrations
                 {
                     id = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     motto = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ClanId = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    LanguageId = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     created_at = table.Column<DateTime>(type: "datetime2", nullable: false),
                     updated_at = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_ClanMotto", x => x.id);
+                    table.ForeignKey(
+                        name: "FK_ClanMotto_Clan_ClanId",
+                        column: x => x.ClanId,
+                        principalTable: "Clan",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -48,12 +56,19 @@ namespace ClanManagement.BusinessLogic.Migrations
                     id = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     name = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     isDefault = table.Column<bool>(type: "bit", nullable: false),
+                    ClanId = table.Column<string>(type: "nvarchar(450)", nullable: true),
                     created_at = table.Column<DateTime>(type: "datetime2", nullable: false),
                     updated_at = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Language", x => x.id);
+                    table.ForeignKey(
+                        name: "FK_Language_Clan_ClanId",
+                        column: x => x.ClanId,
+                        principalTable: "Clan",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -76,6 +91,16 @@ namespace ClanManagement.BusinessLogic.Migrations
                         principalColumn: "id",
                         onDelete: ReferentialAction.Restrict);
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ClanMotto_ClanId",
+                table: "ClanMotto",
+                column: "ClanId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Language_ClanId",
+                table: "Language",
+                column: "ClanId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Name_ClanId",

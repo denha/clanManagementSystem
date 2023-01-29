@@ -13,5 +13,8 @@ namespace ClanManagement.BusinessLogic.Data.Models
         [Column("motto")]
         public string Motto { get; set; }
 
+        public string ClanId { get; set; }
+
+        public string LanguageId { get; set; }
     }
 }
