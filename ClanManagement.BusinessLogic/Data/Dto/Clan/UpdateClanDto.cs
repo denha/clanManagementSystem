@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ClanManagement.BusinessLogic.Data.Dto.Clan
+namespace ClanManagement.BusinessLogic.Data.Dto
 {
     public class UpdateClanDto
     {
@@ -12,5 +12,7 @@ namespace ClanManagement.BusinessLogic.Data.Dto.Clan
         public string ClanMotto { get; set; }
         public string Totem { get; set; }
         public string MinorTotem { get; set; }
+
+        public string MottoId { get; set; }
     }
 }

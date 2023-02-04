@@ -33,6 +33,7 @@ namespace ClanApp
             services.AddScoped<IClanMottoService, ClanMottoService>();
             services.AddScoped<ILanguageService, LanguageService>();
             services.AddScoped<INameService, NameService>();
+            services.AddScoped<IClanService, ClanService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
