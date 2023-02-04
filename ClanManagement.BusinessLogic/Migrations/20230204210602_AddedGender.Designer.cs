@@ -4,14 +4,16 @@ using ClanManagement.BusinessLogic.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ClanManagement.BusinessLogic.Migrations
 {
     [DbContext(typeof(ClanMgtSysDbContext))]
-    partial class ClanMgtSysDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230204210602_AddedGender")]
+    partial class AddedGender
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

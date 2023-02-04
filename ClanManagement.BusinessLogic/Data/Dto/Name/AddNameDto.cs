@@ -10,5 +10,6 @@ namespace ClanManagement.BusinessLogic.Data.Dto
     {
         public string Name { get; set; }
         public string ClanId { get; set; }
+        public string Gender { get; set; }
     }
 }

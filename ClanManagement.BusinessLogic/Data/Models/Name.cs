@@ -12,11 +12,8 @@ namespace ClanManagement.BusinessLogic.Data.Models
     {
         [Column("name")]
         public string Names { get; set; }
-
         public string ClanId { get; set; }
-
-        
-
+        public string Gender { get; set; }
         
     }
 }
